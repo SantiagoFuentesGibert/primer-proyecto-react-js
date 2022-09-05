@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import './Counter.styles.css'
 
 const Counter = (props) => {
     const stockDisponible = 10;
@@ -7,10 +8,14 @@ const Counter = (props) => {
     const restar = () => stock > 0 ? setStock(stock - 1) : alert('No sé pueden introducir valores negativos')
   return (
     <>
-    <span>Stock disponible {stockDisponible}</span>
-    <div>{stock}</div>
-    <button onClick={restar}>-</button>
-    <button onClick={sumar}>+</button>
+    <div className="contenedorCounter">
+        <div className="counter">
+            <span className="stockDisponible">Stock disponible {stockDisponible}</span>
+            <div className="stockDisponible">{stock}</div>
+            <button className="botonCounterRestar" onClick={restar}>-</button>
+            <button className="botonCounterSumar" onClick={sumar}>+</button>
+        </div>
+    </div>
     </>
   );
 }
