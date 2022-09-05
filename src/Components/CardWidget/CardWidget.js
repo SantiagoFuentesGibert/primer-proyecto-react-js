@@ -3,7 +3,9 @@ import './CardWidget.styles.css';
 
 const Carrito = () => {
     return (
-        <img className="carrito" src={Imagen} alt='Imagen del carrito'></img>
+        <button>
+            <img className="carrito" src={Imagen} alt='Imagen del carrito'></img>
+        </button>
     );
 }
 
