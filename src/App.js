@@ -1,8 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import NavBar from './Components/NavBar';
-import ItemListContainer from './Components/ItemListContainer/ItemListContainer'
 import Counter from './Components/Counter/Counter';
+import ItemListContainer from './Components/ItemListContainer/ItemListContainer'
 
 function App() {
   const stock = 10; 
