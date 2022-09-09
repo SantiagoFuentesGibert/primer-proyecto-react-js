@@ -1,4 +1,5 @@
 import CardWidget from './CardWidget/CardWidget'
+import './NavBar.styles.css'
 
 const NavBar =  () => {
     return (

@@ -1,0 +1,18 @@
+.img {
+    width: 250px;
+    border-radius: 10rem;
+}
+
+.contendorProductos {
+    display: grid;
+    grid-template-rows: 250px 50px 40px 35px;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    width: 280px;
+    height: 400px;
+    background-color: rgb(152, 228, 186);
+    margin-bottom: 2rem;
+    border-radius: 8rem;
+}

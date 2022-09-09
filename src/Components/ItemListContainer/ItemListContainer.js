@@ -13,16 +13,16 @@ const Productos = (greeting) => {
     }, []);
 
     const getProducts = new Promise((resolve, reject) => {
-            setTimeout(() => {
-                setProductList(data);
-                resolve();
-            }, 2000)
-    });
-    
+        setTimeout(() => {
+            resolve(data);
+        }, 2000)
+});
+
+
     return (
-    <section>
+    <section className='productos'>
             <h2 className='productos-title'>Productos Descatados {greeting.titulo}</h2>
-            <section>
+            <section className='listaProductos'>
                 <ItemList lista={productList}/>
             </section>
         </section> 

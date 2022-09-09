@@ -1,0 +1,11 @@
+.NavBar-contenedor {
+    display: flex;
+    flex-direction: row;
+    column-gap: 5rem;
+    text-decoration: none;
+}
+
+.NavBar-menu {
+    text-decoration: none;
+    color: white
+}

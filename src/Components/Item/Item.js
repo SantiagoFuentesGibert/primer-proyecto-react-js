@@ -1,10 +1,11 @@
+import './Item.style.css';
 const Item = ({nombre, precio, image, cantidad}) => {
     return (
-        <article>
-            <img src={image} alt={nombre}/>
+        <article className='contendorProductos'>
+            <img className="img" src={image} alt={nombre}/>
             <h2>{nombre}</h2>
-            <span>{precio}</span>
-            <span>{cantidad}</span>
+            <span>$ {precio}</span>
+            <span>Cantidad: {cantidad}</span>
         </article>
     );
 }

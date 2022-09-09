@@ -1,4 +1,9 @@
 .carrito {
     height: 45px;
     width: 45px;
+    background-color: rgb(152, 228, 186) ;
 }
+
+/* .btnCarrito {
+    background-color: rgb(152, 228, 186);
+} */
