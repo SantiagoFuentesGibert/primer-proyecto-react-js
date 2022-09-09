@@ -21,8 +21,8 @@ const Productos = (greeting) => {
 
     return (
     <section className='productos'>
-            <h2 className='productos-title'>Productos Descatados {greeting.titulo}</h2>
-            <section className='listaProductos'>
+            <h2 className='productos-title tracking-in-contract '>Productos Descatados {greeting.titulo}</h2>
+            <section className='listaProductos '>
                 <ItemList lista={productList}/>
             </section>
         </section> 
