@@ -5,24 +5,13 @@
 .productos {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-}
-
-.listaProductos {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    grid-template-columns: 300px 300px;
-    grid-template-rows: 250px 250px 250px 250px;
 }
 
 .tracking-in-contract {
 	-webkit-animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 	        animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
-
 
  @-webkit-keyframes tracking-in-contract {
     0% {
@@ -50,4 +39,3 @@
       opacity: 1;
     }
   }
-  

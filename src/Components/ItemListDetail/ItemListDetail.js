@@ -1,8 +1,8 @@
-import Item from '../Item/Item';
-import './ItemList.style.css'
-const ItemList = ({lista}) => {
+import Item from '../ItemDetail/ItemDetail';
+import './ItemListDetail.style.css'
+const ItemListDetail = ({lista}) => {
     return (
-        <div className='listaProductos'>
+        <div className='listaProductos2'>
             {lista.map((product) => (
             <Item 
             key={product.id} 
@@ -16,4 +16,4 @@ const ItemList = ({lista}) => {
     )
 }
 
-export default ItemList;
+export default ItemListDetail;

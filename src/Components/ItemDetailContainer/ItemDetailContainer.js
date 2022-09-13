@@ -1,7 +1,7 @@
-import './ItemListContainer.style.css';
+import './ItemDetailContainer.style.css';
 import data from "../mockData";
 import { useEffect, useState } from 'react';
-import ItemList from "../ItemList/ItemList";
+import ItemListDetail from "../ItemListDetail/ItemListDetail";
 
 const Productos = (greeting) => {
     const [productList, setProductList] = useState([]);
@@ -14,16 +14,15 @@ const Productos = (greeting) => {
 
     const getProducts = new Promise((resolve, reject) => {
         setTimeout(() => {
-            resolve(data);
+            resolve(data.filter((prod) => prod.id === '1'));
         }, 2000)
 });
 
 
     return (
     <section className='productos'>
-            <h2 className='productos-title tracking-in-contract '>Productos Descatados {greeting.titulo}</h2>
             <section>
-                <ItemList lista={productList}/>
+                <ItemListDetail lista={productList}/>
             </section>
         </section> 
     );
