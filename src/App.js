@@ -1,4 +1,3 @@
-import logo from './Components/images/logo2.png';
 import './App.css';
 import NavBar from './Components/NavBar';
 /* import Counter from './Components/Counter/Counter'; */
@@ -11,7 +10,6 @@ function App() {
   return (
     <BrowserRouter>
     <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
       <NavBar />
     </header>
     <main className='productosMain'>
@@ -20,6 +18,7 @@ function App() {
         <Route path='productos' element={<ItemListContainer titulo={"Productos Descatados"}/>}/>
         <Route path='detail/:id' element={<ItemDetailContainer/>}/>
         <Route path='contacto' element={'hola soy el contacto'}/>
+        <Route path='/category/:category' element={<ItemListContainer/>}/>
       </Routes>
     </main>
     <footer>

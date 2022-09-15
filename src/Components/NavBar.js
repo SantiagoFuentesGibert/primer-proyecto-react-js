@@ -1,28 +1,47 @@
 import CardWidget from './CardWidget/CardWidget'
+import logo from '../Components/images/logo2.png';
 import './NavBar.styles.css'
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const NavBar =  () => {
     return (
         <div className="NavBar-contenedor">
-{/*             <p className="NavBar-menu" href="#1">Inicio</p>
-            <a className="NavBar-menu" href="#2">Productos</a>
-            <a className="NavBar-menu" href="#3">Contacto</a> */}
+            <NavLink to={'/'}><img src={logo} className="App-logo" alt="logo" /></NavLink>
             <ul className='NavBar'>
                 <li>
-                    <Link to={'/'} className="NavBar-menu">
+                    <NavLink to={'/'} className="NavBar-menu">
                         Inicio
-                    </Link>
+                    </NavLink>
                 </li>
                 <li >
-                    <Link to={'/productos'} className="NavBar-menu">
+                    <NavLink to={'/productos'} className="NavBar-menu">
                         Productos
-                    </Link>
+                    </NavLink>
                 </li>
                 <li >
-                    <Link to={'/contacto'} className="NavBar-menu">
+                    <NavLink to={'/contacto'} className="NavBar-menu">
                         Contacto
-                    </Link>
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink to={'/category/Letras'} className="NavBar-menu">
+                        Letras
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink to={'/category/Tops'} className="NavBar-menu">
+                        Tops
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink to={'/category/Carpetas'} className="NavBar-menu">
+                        Carpetas
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink to={'/category/Accesorios'} className="NavBar-menu">
+                        Accesorios
+                    </NavLink>
                 </li>
             </ul>
             <CardWidget />
