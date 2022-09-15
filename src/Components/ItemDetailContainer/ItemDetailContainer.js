@@ -1,10 +1,12 @@
 import './ItemDetailContainer.style.css';
 import data from "../mockData";
 import { useEffect, useState } from 'react';
-import ItemListDetail from "../ItemListDetail/ItemListDetail";
+import { useParams } from 'react-router-dom';
+import ItemListDetail from "../ItemDetailList/ItemDetailList";
 
-const Productos = (greeting) => {
+const Productos = () => {
     const [productList, setProductList] = useState([]);
+    const { id } = useParams();
     
     useEffect(() => {
         getProducts.then((response) => {
@@ -14,16 +16,14 @@ const Productos = (greeting) => {
 
     const getProducts = new Promise((resolve, reject) => {
         setTimeout(() => {
-            resolve(data.filter((prod) => prod.id === '1'));
+            resolve(data.filter((prod) => prod.id === id));
         }, 2000)
+        
 });
 
-
     return (
-    <section className='productos'>
-            <section>
-                <ItemListDetail lista={productList}/>
-            </section>
+        <section>
+            <ItemListDetail lista={productList}/>
         </section> 
     );
 };

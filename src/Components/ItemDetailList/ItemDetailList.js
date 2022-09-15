@@ -7,9 +7,12 @@ const ItemListDetail = ({lista}) => {
             <Item 
             key={product.id} 
             nombre={product.nombre} 
+            detail={product.detail}
             precio={product.precio} 
             image={product.image} 
-            cantidad={product.cantidad}/>
+            cantidad={product.cantidad}
+            btnAgregarCarrito={product.btn}
+            />
             ))
             }
         </div>

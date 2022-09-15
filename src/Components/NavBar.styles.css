@@ -10,3 +10,10 @@
     text-decoration: none;
     color: white;
 }
+
+.NavBar {
+    display: flex;
+    flex-direction: row;
+    column-gap: 4rem;
+    list-style: none;
+}

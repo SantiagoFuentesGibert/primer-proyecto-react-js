@@ -1,5 +1,5 @@
 .listaProductos2 {
     display: grid;
     grid-template-columns: 700px ;
-    justify-items: center;
+    margin-top: 5rem;
 }

@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: 250px 250px;
     grid-template-rows: 250px ;
+    column-gap: 5rem;
     align-items: center;
     justify-content: center;
     align-content: center;
@@ -9,16 +10,13 @@
     width: 700px;
     height: 400px;
     background-color: rgb(152, 228, 186);
-    margin-bottom: 2rem;
     border-radius: 8rem;
     font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
-.btnCarrito {
+.btnAgregarCarrito {
     font-size: 17px;
     font-family: Georgia, 'Times New Roman', Times, serif;;
-    width: 150px;
-    height: 40px;
     background-color: #ffc107;
     border-radius: 2rem;
 }
