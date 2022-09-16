@@ -8,6 +8,7 @@ const ItemList = ({lista}) => {
             <Link
             key={product.id} 
             to={`/detail/` + product.id}
+            style={{textDecoration:"none", color:"black"}}
             >
             <Item 
             nombre={product.nombre} 

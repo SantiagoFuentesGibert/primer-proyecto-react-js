@@ -5,7 +5,7 @@ import ItemList from "../ItemList/ItemList";
 import { useParams } from 'react-router-dom';
 
 const Productos = (props) => {
-    const {category}= useParams();
+    const {category} = useParams();
     const [productList, setProductList] = useState([]);
     useEffect(() => {
         if(category) {
