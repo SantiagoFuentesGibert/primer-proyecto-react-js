@@ -1,10 +1,10 @@
 import React, {useState} from "react";
 import './Counter.styles.css'
 
-const Counter = (props) => {
+const Counter = () => {
     const stockDisponible = 10;
     const [stock, setStock] = useState(0);
-    const sumar = () => stock < props.stock ? setStock(stock + 1) : alert('Se alcanzo el stock disponible')
+    const sumar = () => stock <  stockDisponible ? setStock(stock + 1) : alert('Se alcanzo el stock disponible')
     const restar = () => stock > 0 ? setStock(stock - 1) : alert('No sé pueden introducir valores negativos')
   return (
     <>

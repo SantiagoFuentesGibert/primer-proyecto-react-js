@@ -1,3 +1,4 @@
+import Counter from '../Counter/Counter';
 import './ItemDetail.styles.css';
 const ItemDetail = ({nombre, detail, precio, image, cantidad, btnAgregarCarrito}) => {
     return (
@@ -9,6 +10,7 @@ const ItemDetail = ({nombre, detail, precio, image, cantidad, btnAgregarCarrito}
                 <p>$ {precio}</p>
                 <p>Cantidad: {cantidad}</p>
                 <button className='btnAgregarCarrito'>{btnAgregarCarrito}</button>
+                <Counter />
             </div>
         </article>
     );

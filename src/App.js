@@ -1,12 +1,10 @@
 import './App.css';
 import NavBar from './Components/NavBar';
-/* import Counter from './Components/Counter/Counter'; */
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer'
 import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
-  /* const stock = 10;  */
   return (
     <BrowserRouter>
     <header className="App-header">
