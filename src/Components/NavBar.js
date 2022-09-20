@@ -1,7 +1,7 @@
 import CardWidget from './CardWidget/CardWidget'
 import logo from '../Components/images/logo2.png';
 import './NavBar.styles.css'
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const NavBar =  () => {
     return (
@@ -44,7 +44,7 @@ const NavBar =  () => {
                     </NavLink>
                 </li>
             </ul>
-            <CardWidget />
+            <Link to={'cart'}><CardWidget /></Link>
         </div>
     );
 };
