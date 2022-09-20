@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Counter from '../Counter/Counter';
 import './ItemDetail.styles.css';
 const ItemDetail = ({nombre, detail, precio, image, cantidad, btnAgregarCarrito}) => {
@@ -11,6 +12,7 @@ const ItemDetail = ({nombre, detail, precio, image, cantidad, btnAgregarCarrito}
                 <p>Cantidad: {cantidad}</p>
                 <button className='btnAgregarCarrito'>{btnAgregarCarrito}</button>
                 <Counter />
+                <Link to={'/cart'}>Ir al carrito</Link>
             </div>
         </article>
     );
