@@ -1,17 +1,24 @@
 import React, {useState} from "react";
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
 import './Counter.styles.css'
 
-const Counter = () => {
-    const stockProductos = 10;
-    const stockDisponible = 10;
+const Counter = (props) => {
+    const MySwal = withReactContent(Swal)
     const [stock, setStock] = useState(0);
-    const sumar = () => stock <  stockProductos ? setStock(stock + 1) : alert('Se alcanzo el stock disponible')
-    const restar = () => stock > 0 ? setStock(stock - 1) : alert('No sé pueden introducir valores negativos')
+    const sumar = () => stock <  props.stockProductos ? setStock(stock + 1) : MySwal.fire({
+      icon: 'warning',
+      title: 'Se alcanzó el stock disponible',
+      text: 'Presioná OK para continuar comprando',
+    });
+    const restar = () => stock > 0 ? setStock(stock - 1) : Swal.fire({
+      icon: 'error',
+      title: 'No se pueden ingresar valores negativos',
+      text: "Presioná OK para continuar comprando"});
   return (
     <>
     <div className="contenedorCounter">
         <div className="counter">
-            <span className="stockDisponible">Stock disponible {stockDisponible}</span>
             <div className="stockDisponible">{stock}</div>
             <button className="botonCounterRestar" onClick={restar}>-</button>
             <button className="botonCounterSumar" onClick={sumar}>+</button>

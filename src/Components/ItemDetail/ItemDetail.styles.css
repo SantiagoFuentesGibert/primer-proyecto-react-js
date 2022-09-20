@@ -14,7 +14,12 @@
     font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
+.infoProductos {
+    display: grid;
+}
+
 .btnAgregarCarrito {
+    display: block;
     font-size: 17px;
     font-family: Georgia, 'Times New Roman', Times, serif;;
     background-color: #ffc107;

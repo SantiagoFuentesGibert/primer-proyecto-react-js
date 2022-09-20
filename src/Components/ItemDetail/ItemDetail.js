@@ -5,13 +5,13 @@ const ItemDetail = ({nombre, detail, precio, image, cantidad, btnAgregarCarrito}
     return (
         <article className='contendorProductosDetalle text-focus-in '>
             <img className="img" src={image} alt={nombre}/>
-            <div>
+            <div className='infoProductos'>
                 <h2>{nombre}</h2>
                 <p>{detail}</p>
                 <p>$ {precio}</p>
-                <p>Cantidad: {cantidad}</p>
+                <p>Disponibles: {cantidad}</p>
+                <Counter stockProductos={cantidad}/>
                 <button className='btnAgregarCarrito'>{btnAgregarCarrito}</button>
-                <Counter />
                 <Link to={'/cart'}>Ir al carrito</Link>
             </div>
         </article>
