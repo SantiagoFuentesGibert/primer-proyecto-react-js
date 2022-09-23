@@ -6,12 +6,7 @@ const ItemListDetail = ({lista}) => {
             {lista.map((product) => (
             <Item 
             key={product.id} 
-            nombre={product.nombre} 
-            detail={product.detail}
-            precio={product.precio} 
-            image={product.image} 
-            cantidad={product.cantidad}
-            btnAgregarCarrito={product.btn}
+            product={product}
             />
             ))
             }
