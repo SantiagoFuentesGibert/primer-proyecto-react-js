@@ -3,23 +3,25 @@ import data from "../mockData";
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ItemListDetail from "../ItemDetailList/ItemDetailList";
+import { getFirestore, doc, getDoc } from 'firebase/firestore';
 
 const Productos = () => {
     const [productList, setProductList] = useState([]);
     const { id } = useParams();
-    
-    useEffect(() => {
-        getProducts.then((response) => {
-            setProductList(response);
-        });
-    }, []);
+    const db = getFirestore();
 
-    const getProducts = new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve(data.filter((prod) => prod.id === id));
-        }, 2000)
-        
-});
+    const getProducts = () => {
+        const queryDoc = doc(db, 'item', id);
+
+        getDoc(queryDoc)
+        .then((res) => {
+            setProductList(res.data())
+        });
+};
+
+    useEffect(() => {
+        getProducts();
+    }, [id]);
 
     return (
         <section>

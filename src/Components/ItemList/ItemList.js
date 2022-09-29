@@ -11,11 +11,7 @@ const ItemList = ({lista}) => {
             style={{textDecoration:"none", color:"black"}}
             >
             <Item 
-            nombre={product.nombre} 
-            precio={product.precio}
-            category={product.category}
-            image={product.image} 
-            cantidad={product.cantidad}/>
+            product={product}/>
             </Link>
             ))}
         </div>

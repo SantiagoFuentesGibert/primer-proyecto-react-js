@@ -1,4 +1,4 @@
-import ImgProd1 from './images/letras.jpeg';
+/* import ImgProd1 from './images/letras.jpeg';
 import ImgProd2 from './images/top.png';
 import ImgProd3 from './images/moños.jpg';
 import ImgProd4 from './images/Carpetas.jpg';
@@ -68,4 +68,4 @@ const Data = [
     }
 ];
 
-export default Data; 
+export default Data;  */

@@ -1,11 +1,13 @@
 import './Item.style.css';
-const Item = ({nombre, precio, image, cantidad}) => {
+
+const rutaInicial = '../img/'
+const Item = ({product}) => {
     return (
         <article className='contendorProductos text-focus-in '>
-            <img className="img" src={image} alt={nombre}/>
-            <h2>{nombre}</h2>
-            <span>$ {precio}</span>
-            <span>Cantidad: {cantidad}</span>
+            <img className="img" src={rutaInicial + product.image} alt={product.nombre}/>
+            <h2>{product.nombre}</h2>
+            <span>$ {product.price}</span>
+            <span>Cantidad: {product.stock}</span>
         </article>
     );
 }

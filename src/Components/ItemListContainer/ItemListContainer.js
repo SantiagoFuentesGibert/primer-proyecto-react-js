@@ -3,11 +3,12 @@ import data from "../mockData";
 import { useEffect, useState } from 'react';
 import ItemList from "../ItemList/ItemList";
 import { useParams } from 'react-router-dom';
+import { getFirestore, getDocs, collection } from 'firebase/firestore';
 
 const Productos = (props) => {
     const {category} = useParams();
     const [productList, setProductList] = useState([]);
-    useEffect(() => {
+/*     useEffect(() => {
         if(category) {
             const response = data.filter((response) => response.category === category)
             setProductList(response);
@@ -22,7 +23,22 @@ const Productos = (props) => {
         setTimeout(() => {
             resolve(data);
         }, 2000)
-});
+}); */
+
+//Probando usar API firebase
+const getProducts = () => {
+    const db = getFirestore();
+    const querySnapshot = collection(db, 'items');
+    getDocs(querySnapshot).then((response) => {
+        const data = response.docs.map((product) => {
+            return { id: product.id, ...product.data()};
+        });
+        setProductList(data);
+    });
+};
+useEffect(() => {
+    getProducts();
+}, [category])
 
 
     return (
