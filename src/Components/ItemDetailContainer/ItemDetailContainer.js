@@ -1,22 +1,21 @@
 import './ItemDetailContainer.style.css';
-import data from "../mockData";
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import ItemListDetail from "../ItemDetailList/ItemDetailList";
+import ItemDetail from "../ItemDetail/ItemDetail";
 import { getFirestore, doc, getDoc } from 'firebase/firestore';
 
 const Productos = () => {
     const [productList, setProductList] = useState([]);
+    const [loading, setLoading] = useState(true);
     const { id } = useParams();
-    const db = getFirestore();
-
+    
     const getProducts = () => {
-        const queryDoc = doc(db, 'item', id);
-
+        const db = getFirestore();
+        const queryDoc = doc(db, 'items', id);
         getDoc(queryDoc)
         .then((res) => {
             setProductList(res.data())
-        });
+        }).finally(() => {setLoading(false)});
 };
 
     useEffect(() => {
@@ -24,8 +23,9 @@ const Productos = () => {
     }, [id]);
 
     return (
+
         <section>
-            <ItemListDetail lista={productList}/>
+            {loading ? <p>Cargando...</p> : <ItemDetail product={productList} />}
         </section> 
     );
 };
