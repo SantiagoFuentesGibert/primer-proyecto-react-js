@@ -5,6 +5,16 @@
 }
 
 .btnCarrito {
+    display: flex;
     background-color: rgb(152, 228, 186);
     border: none;
 } 
+
+.contadorCarrito {
+    font-size: 15px;
+    background-color: red;
+    width: 17px;
+    border-radius: 50%;
+    color: black;
+    border: solid red 4px;
+}

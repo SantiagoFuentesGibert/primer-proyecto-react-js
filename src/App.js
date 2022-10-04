@@ -5,6 +5,9 @@ import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailCont
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { CartProvider } from './Components/Context/cartProvider'
 import Cart from './Components/Cart/Cart';
+import imgFooter from './Components/images/footerLogo.png'
+import imgIg from './Components/images/instagram.png'
+import imgFc from './Components/images/facebook.png'
 
 function App() {
   return (
@@ -25,7 +28,16 @@ function App() {
           </Routes>
         </main>
         <footer className='footer'>
-          <div>Aca va a ir el contenido del footer</div>
+          <img src={imgFooter} alt='lala'></img>
+          <div>
+            <p>Ubicación: Calle 124, Moreno, Buenos Aires</p>
+            <p>Telefono: 11-2345-6789/11-9876-5432</p>
+            <p>Email: lorem@gmail.com</p>
+          </div>
+          <div>
+          <img className='imgFooterRedes' src={imgIg} alt='ff'/>
+          <img className='imgFooterRedes' src={imgFc} alt='ff'/>
+          </div>
         </footer>
         </BrowserRouter>
       </CartProvider>

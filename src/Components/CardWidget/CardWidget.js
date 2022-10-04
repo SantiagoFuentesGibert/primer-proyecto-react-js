@@ -8,7 +8,7 @@ const CardWidget = () => {
     return (
         <button className="btnCarrito">
             <img className="carrito" src={Imagen} alt='Imagen del carrito'/>
-            {totalItems () > 0 ? totalItems() : "0"}
+            <div className='contadorCarrito'>{totalItems () > 0 ? totalItems() : "0"}</div>
         </button>
     );
 }

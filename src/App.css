@@ -48,5 +48,16 @@
 }
 
 .footer {
+  display: grid;
+  grid-template-columns: 250px 250px 150px;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 0;
+  background-color: rgb(152, 228, 186);
+  height: 220px;
+}
+
+.imgFooterRedes {
+  margin-right: 4px;
+  width: 50px;
 }
