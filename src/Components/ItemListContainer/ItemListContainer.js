@@ -8,7 +8,8 @@ const ItemListContainer = (props) => {
     const {category} = useParams();
     const [productList, setProductList] = useState([]);
 
-const getProducts = () => {
+useEffect(() => {
+    const getProducts = () => {
     const db = getFirestore();
     const querySnapshot = collection(db, 'items');
     
@@ -28,11 +29,8 @@ const getProducts = () => {
         setProductList(data);
     });
     }};
-
-useEffect(() => {
     getProducts();
 }, [category])
-
 
     return (
     <section className='productos'>

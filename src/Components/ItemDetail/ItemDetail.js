@@ -22,9 +22,9 @@ const ItemDetail = ({product}) => {
                 <p>Disponibles: {product.stock}</p>
                 <Counter stockProductos={product.stock} stock={stock} setStock={setStock}/>
                 <button className='btnAgregarCarrito' onClick={() => onAdd(product)}>Agregar al carrito</button>
-                <Link to={'/cart'}>Ir al carrito</Link>
+                <Link className='irAlCarrito' to={'/cart'}>Ir al carrito</Link>
             </div>
-            <Link to={"/"}>Volver</Link>
+            <Link className='volverProductos' to={"/"}>Volver</Link>
         </article>
     );
 }
