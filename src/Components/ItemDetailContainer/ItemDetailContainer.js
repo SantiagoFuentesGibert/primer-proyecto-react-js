@@ -5,16 +5,16 @@ import ItemDetail from "../ItemDetail/ItemDetail";
 import { getFirestore, doc, getDoc } from 'firebase/firestore';
 
 const Productos = () => {
-    const [productList, setProductList] = useState([]);
+    const [item, setItem] = useState({});
     const [loading, setLoading] = useState(true);
     const { id } = useParams();
-    
     const getProducts = () => {
         const db = getFirestore();
         const queryDoc = doc(db, 'items', id);
         getDoc(queryDoc)
         .then((res) => {
-            setProductList(res.data())
+            const item = {...res.data(), id: res.id};
+            setItem(item);
         }).finally(() => {setLoading(false)});
 };
 
@@ -25,7 +25,7 @@ const Productos = () => {
     return (
 
         <section>
-            {loading ? <p>Cargando...</p> : <ItemDetail product={productList} />}
+            {loading ? <p>Cargando...</p> : <ItemDetail product={item} />}
         </section> 
     );
 };

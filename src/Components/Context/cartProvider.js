@@ -9,7 +9,7 @@ export const CartProvider = ({children}) => {
             alert('Ya esta en el carrito')
         }else {
             setCart([...cart, {...item, cantidad}]);
-        } 
+        }
     };
 
     const isInCart = (id) => {

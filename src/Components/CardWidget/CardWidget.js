@@ -3,7 +3,7 @@ import './CardWidget.styles.css';
 import { useContext } from 'react';
 import { CartContext } from '../Context/cartContext';
 
-const Carrito = () => {
+const CardWidget = () => {
     const {totalItems} = useContext(CartContext)
     return (
         <button className="btnCarrito">
@@ -13,4 +13,4 @@ const Carrito = () => {
     );
 }
 
-export default Carrito;
+export default CardWidget;

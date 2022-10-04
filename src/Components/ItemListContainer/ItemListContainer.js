@@ -1,31 +1,13 @@
 import './ItemListContainer.style.css';
-import data from "../mockData";
 import { useEffect, useState } from 'react';
 import ItemList from "../ItemList/ItemList";
 import { useParams } from 'react-router-dom';
 import { getFirestore, getDocs, collection, query, where } from 'firebase/firestore';
 
-const Productos = (props) => {
+const ItemListContainer = (props) => {
     const {category} = useParams();
     const [productList, setProductList] = useState([]);
-/*     useEffect(() => {
-        if(category) {
-            const response = data.filter((response) => response.category === category)
-            setProductList(response);
-        }else {
-            getProducts.then((response) => {
-            setProductList(response);
-        });
-        }
-    }, [category]);
 
-    const getProducts = new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve(data);
-        }, 2000)
-}); */
-
-//Probando usar API firebase
 const getProducts = () => {
     const db = getFirestore();
     const querySnapshot = collection(db, 'items');
@@ -62,4 +44,4 @@ useEffect(() => {
     );
 };
 
-export default Productos;
+export default ItemListContainer;
